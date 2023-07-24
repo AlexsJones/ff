@@ -1,0 +1,3 @@
+[DEBUG] resolving template from classpath for init/jreleaser.yml.tpl
+[INFO]  Writing file /home/alex/Code/ff/jreleaser.yml
+[INFO]  JReleaser initialized at /home/alex/Code/ff

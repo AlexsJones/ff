@@ -1,0 +1,949 @@
+[INFO]  JReleaser 1.7.0
+------------------------------------------------------------
+jreleaser 1.7.0
+------------------------------------------------------------
+Build time:   2023-06-27 12:20:03Z
+Revision:     5774c3f318e7db1c896e592b7ca8634e1da44832
+JVM:          17.0.2 (Azul Systems, Inc. 17.0.2+8-LTS)
+------------------------------------------------------------
+[INFO]  Configuring with jreleaser.yml
+[INFO]    - basedir set to /home/alex/Code/ff
+[INFO]    - outputdir set to /home/alex/Code/ff/out/jreleaser
+[INFO]  Reading configuration
+[DEBUG]   - basedir set to /home/alex/Code/ff
+[DEBUG]   - baseOutputDirectory set to /home/alex/Code/ff/out
+[DEBUG]   - outputDirectory set to /home/alex/Code/ff/out/jreleaser
+[DEBUG]   - checksumDirectory set to /home/alex/Code/ff/out/jreleaser/checksums
+[DEBUG]   - catalogsDirectory set to /home/alex/Code/ff/out/jreleaser/catalogs
+[DEBUG]   - signaturesDirectory set to /home/alex/Code/ff/out/jreleaser/signatures
+[DEBUG]   - prepareDirectory set to /home/alex/Code/ff/out/jreleaser/prepare
+[DEBUG]   - packageDirectory set to /home/alex/Code/ff/out/jreleaser/package
+[DEBUG]   - downloadDirectory set to /home/alex/Code/ff/out/jreleaser/download
+[DEBUG]   - assembleDirectory set to /home/alex/Code/ff/out/jreleaser/assemble
+[DEBUG]   - artifactsDirectory set to /home/alex/Code/ff/out/jreleaser/artifacts
+[INFO]  git-root-search set to false
+[INFO]  Loading variables from /home/alex/.jreleaser/config.properties
+[WARN]  Variables source /home/alex/.jreleaser/config.properties does not exist
+[DEBUG] The following variables are defined in the current environment:
+[DEBUG]   JRELEASER_GITHUB_TOKEN
+[INFO]  Validating configuration
+[INFO]  Strict mode set to false
+[DEBUG] adjusting distributions with assemblies
+[DEBUG]   [validation] --== ASSEMBLE ==--
+[DEBUG]   [validation] hooks
+[DEBUG]   [validation] hooks.command
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] hooks.script
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] project
+[DEBUG]   [validation] download
+[DEBUG]   [validation] assemble
+[DEBUG]   [validation] assemble.archive
+[DEBUG]   [validation] assemble.archive.rust-jreleaser
+[DEBUG]   [validation] signing
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] release
+[DEBUG]   [validation] release.github
+[DEBUG]   [validation] checksum
+[DEBUG]   [validation] deploy
+[DEBUG]   [validation] deploy.maven
+[DEBUG]   [validation] upload
+[DEBUG]   [validation] distributions
+[DEBUG]   [validation] catalog
+[DEBUG]   [validation] catalog.sbom
+[DEBUG]   [validation] catalog.sbom.cyclonedx
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] catalog.sbom.syft
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] catalog.slsa
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] announce
+[DEBUG]   [validation] - disabled
+[DEBUG]   [postvalidation] project
+[DEBUG]   [postvalidation] assemble
+[DEBUG]   [postvalidation] assemble.jpackage
+[DEBUG]   [resolution] assemble
+[DEBUG]   [resolution] assemble.archive
+[DEBUG]   [validation] --== CONFIG ==--
+[DEBUG]   [validation] hooks
+[DEBUG]   [validation] hooks.command
+[DEBUG]   [validation] hooks.script
+[DEBUG]   [validation] project
+[DEBUG]   [validation] download
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] assemble
+[DEBUG]   [validation] assemble.archive
+[DEBUG]   [validation] assemble.archive.rust-jreleaser
+[DEBUG]   [validation] signing
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] release
+[DEBUG]   [validation] release.github
+[DEBUG]   [validation] checksum
+[DEBUG]   [validation] deploy
+[DEBUG]   [validation] deploy.maven
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] upload
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] packagers
+[DEBUG]   [validation] distributions
+[DEBUG]   [validation] distribution.rust-jreleaser
+[DEBUG]   [validation] distribution.rust-jreleaser.appImage
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] distribution.rust-jreleaser.asdf
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] distribution.rust-jreleaser.brew
+[DEBUG]   [validation] distribution.rust-jreleaser.brew.cask
+[DEBUG]   [validation] distribution.rust-jreleaser.chocolatey
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] distribution.rust-jreleaser.docker
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] distribution.rust-jreleaser.flatpak
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] distribution.rust-jreleaser.gofish
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] distribution.rust-jreleaser.jbang
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] distribution.rust-jreleaser.jib
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] distribution.rust-jreleaser.macports
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] distribution.rust-jreleaser.scoop
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] distribution.rust-jreleaser.sdkman
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] distribution.rust-jreleaser.snap
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] distribution.rust-jreleaser.spec
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] distribution.rust-jreleaser.winget
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] files
+[DEBUG]   [validation] catalog
+[DEBUG]   [validation] catalog.sbom
+[DEBUG]   [validation] catalog.sbom.cyclonedx
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] catalog.sbom.syft
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] catalog.slsa
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] announce
+[DEBUG]   [validation] announce.article
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] announce.bluesky
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] announce.discussions
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] announce.discord
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] announce.discourse
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] announce.gitter
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] announce.googleChat
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] announce.linkedin
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] announce.http
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] announce.smtp
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] announce.mastodon
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] announce.mattermost
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] announce.openCollective
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] announce.sdkman
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] announce.slack
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] announce.teams
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] announce.telegram
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] announce.twitter
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] announce.webhooks
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] announce.zulip
+[DEBUG]   [validation] - disabled
+[DEBUG]   [validation] - disabled
+[DEBUG]   [postvalidation] project
+[DEBUG]   [postvalidation] assemble
+[DEBUG]   [postvalidation] assemble.jpackage
+[DEBUG]   [postvalidation] distributions
+[DEBUG]   [postvalidation] distribution.rust-jreleaser
+environment:
+    properties:
+        artifactsDir: out/jreleaser/assemble/rust-jreleaser/archive
+ 
+hooks:
+    enabled: false
+    active: NEVER
+    command:
+        enabled: false
+        active: NEVER
+    script:
+        enabled: false
+        active: NEVER
+ 
+project:
+    name: ff
+    version: 0.0.3
+    versionPattern: SEMVER
+    snapshot:
+        enabled: false
+        pattern: .*-SNAPSHOT
+        label: early-access
+        fullChangelog: false
+    description: Fast find written in Rust
+    longDescription: Fast find written in Rust
+    license: Apache-2.0
+    inceptionYear: 2023
+    copyright: 2023 Alex Jones
+    authors:
+        Alex Jones
+    stereotype: NONE
+    links:
+        homepage: https://github.com/AlexsJones/ff
+        documentation: https://github.com/AlexsJones/ff
+        license: https://spdx.org/licenses/Apache-2.0.html
+        bugTracker: https://{{repoHost}}/{{repoOwner}}/{{repoName}}/issues
+        vcsBrowser: https://{{repoHost}}/{{repoOwner}}/{{repoName}}
+    extraProperties:
+        versionMajor: 0
+        versionMinor: 0
+        versionPatch: 3
+        versionNumber: 0.0.3
+        versionWithUnderscores: 0_0_3
+        versionWithDashes: 0-0-3
+        versionNumberWithUnderscores: 0_0_3
+        versionNumberWithDashes: 0-0-3
+        effectiveVersionWithUnderscores: 0_0_3
+        effectiveVersionWithDashes: 0-0-3
+ 
+platform:
+    replacements:
+        osx-x86_64: darwin-amd64
+        linux-x86_64: linux-amd64
+        windows-x86_64: windows-amd64
+ 
+release:
+    github:
+        enabled: true
+        host: github.com
+        owner: AlexsJones
+        name: ff
+        username: AlexsJones
+        token: ************
+        artifacts: true
+        files: true
+        checksums: true
+        catalogs: true
+        signatures: true
+        repoUrl: https://{{repoHost}}/{{repoOwner}}/{{repoName}}
+        repoCloneUrl: https://{{repoHost}}/{{repoOwner}}/{{repoName}}.git
+        commitUrl: https://{{repoHost}}/{{repoOwner}}/{{repoName}}/commits
+        srcUrl: https://{{repoHost}}/{{repoOwner}}/{{repoName}}/blob/{{repoBranch}}
+        downloadUrl: https://{{repoHost}}/{{repoOwner}}/{{repoName}}/releases/download/{{tagName}}/{{artifactFile}}
+        releaseNotesUrl: https://{{repoHost}}/{{repoOwner}}/{{repoName}}/releases/tag/{{tagName}}
+        latestReleaseUrl: https://{{repoHost}}/{{repoOwner}}/{{repoName}}/releases/latest
+        issueTrackerUrl: https://{{repoHost}}/{{repoOwner}}/{{repoName}}/issues
+        tagName: v{{projectVersion}}
+        releaseName: Release {{tagName}}
+        branch: main
+        branchPush: main
+        commitAuthor:
+            name: jreleaserbot
+            email: jreleaser@kordamp.org
+        sign: false
+        skipTag: true
+        skipRelease: false
+        overwrite: true
+        update:
+            enabled: false
+        apiEndpoint: https://api.github.com
+        connectTimeout: 20
+        readTimeout: 60
+        changelog:
+            enabled: true
+            append:
+                enabled: false
+            links: false
+            skipMergeCommits: false
+            formatted: NEVER
+            hide:
+            contributors:
+        milestone:
+            name: {{tagName}}
+            close: true
+        issues:
+            enabled: false
+            comment: 🎉 This issue has been resolved in `{{tagName}}` ([Release Notes]({{releaseNotesUrl}}))
+            label:
+                name: released
+                color: #FF0000
+                description: Issue has been released
+        prerelease:
+            enabled: false
+        draft: false
+        releaseNotes:
+            enabled: false
+ 
+checksum:
+    name: checksums.txt
+    individual: false
+    algorithms:
+        SHA_256
+    artifacts: true
+    files: true
+ 
+signing:
+    enabled: false
+    active: NEVER
+    armored: false
+    verify: true
+    artifacts: true
+    files: true
+    checksums: true
+    catalogs: true
+    passphrase: **unset**
+    publicKey: **unset**
+    secretKey: **unset**
+ 
+announce:
+    enabled: false
+    active: NEVER
+    article:
+        enabled: false
+        active: NEVER
+        commitAuthor:
+        repository:
+            enabled: false
+            name: article
+            token: **unset**
+    bluesky:
+        enabled: false
+        active: NEVER
+        handle: **unset**
+        password: **unset**
+    discord:
+        enabled: false
+        active: NEVER
+        webhook: **unset**
+    discourse:
+        enabled: false
+        active: NEVER
+        apiKey: **unset**
+        username: **unset**
+    discussions:
+        enabled: false
+        active: NEVER
+    gitter:
+        enabled: false
+        active: NEVER
+        webhook: **unset**
+    googlechat:
+        enabled: false
+        active: NEVER
+        webhook: **unset**
+    linkedin:
+        enabled: false
+        active: NEVER
+        owner: **unset**
+        accessToken: **unset**
+    smtp:
+        enabled: false
+        active: NEVER
+        auth: false
+        password: **unset**
+    mastodon:
+        enabled: false
+        active: NEVER
+        accessToken: **unset**
+    mattermost:
+        enabled: false
+        active: NEVER
+        webhook: **unset**
+        structuredMessage: true
+    opencollective:
+        enabled: false
+        active: NEVER
+        token: **unset**
+    sdkman:
+        enabled: false
+        consumerKey: **unset**
+        consumerToken: **unset**
+    slack:
+        enabled: false
+        active: NEVER
+        webhook: **unset**
+        token: **unset**
+    teams:
+        enabled: false
+        active: NEVER
+        webhook: **unset**
+    telegram:
+        enabled: false
+        active: NEVER
+        token: **unset**
+        chatId: **unset**
+    twitter:
+        enabled: false
+        active: NEVER
+        consumerKey: **unset**
+        consumerSecret: **unset**
+        accessToken: **unset**
+        accessTokenSecret: **unset**
+    zulip:
+        enabled: false
+        active: NEVER
+        apiKey: **unset**
+ 
+packagers:
+    appimage:
+        enabled: false
+        active: NEVER
+        continueOnError: false
+        commitAuthor:
+            name: jreleaserbot
+            email: jreleaser@kordamp.org
+        developerName: Alex Jones
+        requiresTerminal: false
+        repository:
+            enabled: false
+            owner: AlexsJones
+            name: appimage
+            tagName: v{{projectVersion}}
+            branch: HEAD
+            branchPush: HEAD
+            username: AlexsJones
+            token: ************
+    asdf:
+        enabled: false
+        active: NEVER
+        continueOnError: false
+        commitAuthor:
+            name: jreleaserbot
+            email: jreleaser@kordamp.org
+        repository:
+            enabled: false
+            owner: AlexsJones
+            name: asdf
+            tagName: v{{projectVersion}}
+            branch: HEAD
+            branchPush: HEAD
+            username: AlexsJones
+            token: ************
+    brew:
+        enabled: true
+        active: ALWAYS
+        continueOnError: false
+        commitAuthor:
+            name: alexjones
+            email: alexsimonjones@gmail.com
+        multiPlatform: false
+        tap:
+            enabled: false
+            owner: alexjones
+            name: homebrew-ff
+            tagName: v{{projectVersion}}
+            branch: HEAD
+            branchPush: HEAD
+            username: AlexsJones
+            token: ************
+        cask:
+            enabled: false
+    chocolatey:
+        enabled: false
+        active: NEVER
+        continueOnError: false
+        commitAuthor:
+            name: jreleaserbot
+            email: jreleaser@kordamp.org
+        apiKey: **unset**
+        remoteBuild: false
+        bucket:
+            enabled: false
+            owner: AlexsJones
+            name: chocolatey-bucket
+            tagName: v{{projectVersion}}
+            branch: HEAD
+            branchPush: HEAD
+            username: AlexsJones
+            token: ************
+    docker:
+        enabled: false
+        active: NEVER
+        useLocalArtifact: true
+        buildx:
+            enabled: false
+            createBuilder: true
+        commitAuthor:
+            name: jreleaserbot
+            email: jreleaser@kordamp.org
+        repository:
+            enabled: false
+            owner: AlexsJones
+            name: docker
+            tagName: v{{projectVersion}}
+            branch: HEAD
+            branchPush: HEAD
+            username: AlexsJones
+            token: ************
+            versionedSubfolders: false
+        continueOnError: false
+    flatpak:
+        enabled: false
+        active: NEVER
+        continueOnError: false
+        commitAuthor:
+            name: jreleaserbot
+            email: jreleaser@kordamp.org
+        developerName: Alex Jones
+        repository:
+            enabled: false
+            owner: AlexsJones
+            name: flatpak
+            tagName: v{{projectVersion}}
+            branch: HEAD
+            branchPush: HEAD
+            username: AlexsJones
+            token: ************
+    gofish:
+        enabled: false
+        active: NEVER
+        continueOnError: false
+        commitAuthor:
+            name: jreleaserbot
+            email: jreleaser@kordamp.org
+        repository:
+            enabled: false
+            owner: AlexsJones
+            name: AlexsJones-fish-food
+            tagName: v{{projectVersion}}
+            branch: HEAD
+            branchPush: HEAD
+            username: AlexsJones
+            token: ************
+    jbang:
+        enabled: false
+        active: NEVER
+        continueOnError: false
+        commitAuthor:
+            name: jreleaserbot
+            email: jreleaser@kordamp.org
+        catalog:
+            enabled: false
+            owner: AlexsJones
+            name: jbang-catalog
+            tagName: v{{projectVersion}}
+            branch: HEAD
+            branchPush: HEAD
+            username: AlexsJones
+            token: ************
+    jib:
+        enabled: false
+        active: NEVER
+        commitAuthor:
+            name: jreleaserbot
+            email: jreleaser@kordamp.org
+        repository:
+            enabled: false
+            owner: AlexsJones
+            name: jib
+            tagName: v{{projectVersion}}
+            branch: HEAD
+            branchPush: HEAD
+            username: AlexsJones
+            token: ************
+            versionedSubfolders: false
+        continueOnError: false
+    macports:
+        enabled: false
+        active: NEVER
+        continueOnError: false
+        commitAuthor:
+            name: jreleaserbot
+            email: jreleaser@kordamp.org
+        repository:
+            enabled: false
+            owner: AlexsJones
+            name: macports
+            tagName: v{{projectVersion}}
+            branch: HEAD
+            branchPush: HEAD
+            username: AlexsJones
+            token: ************
+    scoop:
+        enabled: false
+        active: NEVER
+        continueOnError: false
+        commitAuthor:
+            name: jreleaserbot
+            email: jreleaser@kordamp.org
+        bucket:
+            enabled: false
+            owner: AlexsJones
+            name: scoop-AlexsJones
+            tagName: v{{projectVersion}}
+            branch: HEAD
+            branchPush: HEAD
+            username: AlexsJones
+            token: ************
+    sdkman:
+        enabled: false
+        continueOnError: false
+        connectTimeout: 20
+        readTimeout: 60
+        consumerKey: **unset**
+        consumerToken: **unset**
+    snap:
+        enabled: false
+        active: NEVER
+        continueOnError: false
+        commitAuthor:
+            name: jreleaserbot
+            email: jreleaser@kordamp.org
+        base: core20
+        grade: stable
+        confinement: strict
+        remoteBuild: false
+        snap:
+            enabled: false
+            owner: AlexsJones
+            name: snap
+            tagName: v{{projectVersion}}
+            branch: HEAD
+            branchPush: HEAD
+            username: AlexsJones
+            token: ************
+    spec:
+        enabled: false
+        active: NEVER
+        continueOnError: false
+        commitAuthor:
+            name: jreleaserbot
+            email: jreleaser@kordamp.org
+        repository:
+            enabled: false
+            owner: AlexsJones
+            name: AlexsJones-spec
+            tagName: v{{projectVersion}}
+            branch: HEAD
+            branchPush: HEAD
+            username: AlexsJones
+            token: ************
+    winget:
+        enabled: false
+        active: NEVER
+        continueOnError: false
+        commitAuthor:
+            name: jreleaserbot
+            email: jreleaser@kordamp.org
+        package:
+        publisher:
+        installer:
+            type: WIX
+            scope: MACHINE
+            upgradeBehavior: INSTALL
+        repository:
+            enabled: false
+            owner: AlexsJones
+            name: winget
+            tagName: v{{projectVersion}}
+            branch: HEAD
+            branchPush: HEAD
+            username: AlexsJones
+            token: ************
+ 
+download:
+    enabled: false
+    active: NEVER
+ 
+assemble:
+    enabled: true
+    active: ALWAYS
+    archive:
+        rust-jreleaser:
+            enabled: true
+            exported: true
+            active: ALWAYS
+            stereotype: NONE
+            platform:
+                replacements:
+                    osx-x86_64: darwin-amd64
+                    linux-x86_64: linux-amd64
+                    windows-x86_64: windows-amd64
+            archiveName: {{distributionName}}-{{projectVersion}}
+            distributionType: BINARY
+            attachPlatform: true
+            formats:
+                ZIP
+            options:
+                timestamp: 2023-07-24T14:44:25+01:00[GMT+01:00]
+                longFileMode: ERROR
+                bigNumberMode: ERROR
+            templateDirectory: src/jreleaser/assemblers/rust-jreleaser/archive
+            fileSets:
+                fileSet 0:
+                    enabled: true
+                    active: ALWAYS
+                    input: target/release
+                    output: bin
+                    includes:
+                        rust-jreleaser{.exe,}
+                fileSet 1:
+                    enabled: true
+                    active: ALWAYS
+                    input: .
+                    includes:
+                        LICENSE
+ 
+deploy:
+    enabled: false
+    active: NEVER
+    maven:
+        enabled: false
+        active: NEVER
+        pomchecker:
+            version: 1.9.0
+            failOnWarning: true
+            failOnError: true
+ 
+upload:
+    enabled: false
+    active: NEVER
+ 
+catalog:
+    enabled: false
+    active: NEVER
+    sbom:
+        enabled: false
+        active: NEVER
+        cyclonedx:
+            enabled: false
+            active: NEVER
+            distributions: false
+            files: false
+            pack:
+                enabled: false
+        syft:
+            enabled: false
+            active: NEVER
+            distributions: false
+            files: false
+            pack:
+                enabled: false
+    slsa:
+        enabled: false
+        active: NEVER
+        artifacts: true
+        files: true
+        deployables: true
+ 
+distributions:
+    rust-jreleaser:
+        enabled: true
+        active: ALWAYS
+        type: BINARY
+        executable:
+            name: rust-jreleaser
+            windowsExtension: exe
+        platform:
+        artifacts:
+            artifact 0:
+                enabled: true
+                active: ALWAYS
+                path: out/jreleaser/assemble/rust-jreleaser/archive/rust-jreleaser-0.0.3-linux-amd64.zip
+                platform: linux-x86_64
+            artifact 1:
+                enabled: true
+                active: ALWAYS
+                path: out/jreleaser/assemble/rust-jreleaser/archive/rust-jreleaser-0.0.3-darwin-amd64.zip
+                platform: osx-x86_64
+            artifact 2:
+                enabled: true
+                active: ALWAYS
+                path: out/jreleaser/assemble/rust-jreleaser/archive/rust-jreleaser-0.0.3-windows-amd64.zip
+                platform: windows-x86_64
+        stereotype: NONE
+        appimage:
+            enabled: false
+            active: NEVER
+            continueOnError: false
+            commitAuthor:
+            requiresTerminal: false
+            repository:
+                enabled: false
+                name: appimage
+                token: **unset**
+        asdf:
+            enabled: false
+            active: NEVER
+            continueOnError: false
+            commitAuthor:
+            repository:
+                enabled: false
+                name: asdf
+                token: **unset**
+        brew:
+            enabled: true
+            active: ALWAYS
+            continueOnError: false
+            templateDirectory: src/jreleaser/distributions/rust-jreleaser/brew
+            commitAuthor:
+                name: alexjones
+                email: alexsimonjones@gmail.com
+            formulaName: rust-jreleaser
+            multiPlatform: false
+            tap:
+                enabled: true
+                active: RELEASE
+                owner: alexjones
+                name: homebrew-ff
+                tagName: v{{projectVersion}}
+                branch: HEAD
+                branchPush: HEAD
+                username: AlexsJones
+                token: ************
+                commitMessage: {{distributionName}} {{tagName}}
+            cask:
+                enabled: false
+        chocolatey:
+            enabled: false
+            active: NEVER
+            continueOnError: false
+            commitAuthor:
+            apiKey: **unset**
+            remoteBuild: false
+            bucket:
+                enabled: false
+                name: chocolatey-bucket
+                token: **unset**
+        docker:
+            enabled: false
+            active: NEVER
+            useLocalArtifact: true
+            buildx:
+                enabled: false
+                createBuilder: true
+            commitAuthor:
+            repository:
+                enabled: false
+                name: docker
+                token: **unset**
+                versionedSubfolders: false
+            continueOnError: false
+        flatpak:
+            enabled: false
+            active: NEVER
+            continueOnError: false
+            commitAuthor:
+            repository:
+                enabled: false
+                name: flatpak
+                token: **unset**
+        gofish:
+            enabled: false
+            active: NEVER
+            continueOnError: false
+            commitAuthor:
+            repository:
+                enabled: false
+                name: fish-food
+                token: **unset**
+        jbang:
+            enabled: false
+            active: NEVER
+            continueOnError: false
+            commitAuthor:
+            catalog:
+                enabled: false
+                name: jbang-catalog
+                token: **unset**
+        jib:
+            enabled: false
+            active: NEVER
+            commitAuthor:
+            repository:
+                enabled: false
+                name: jib
+                token: **unset**
+                versionedSubfolders: false
+            continueOnError: false
+        macports:
+            enabled: false
+            active: NEVER
+            continueOnError: false
+            commitAuthor:
+            repository:
+                enabled: false
+                name: macports
+                token: **unset**
+        scoop:
+            enabled: false
+            active: NEVER
+            continueOnError: false
+            commitAuthor:
+            bucket:
+                enabled: false
+                name: scoop
+                token: **unset**
+        sdkman:
+            enabled: false
+            continueOnError: false
+            connectTimeout: 0
+            readTimeout: 0
+            consumerKey: **unset**
+            consumerToken: **unset**
+        snap:
+            enabled: false
+            active: NEVER
+            continueOnError: false
+            commitAuthor:
+            base: core20
+            grade: stable
+            confinement: strict
+            remoteBuild: false
+            snap:
+                enabled: false
+                name: snap
+                token: **unset**
+        spec:
+            enabled: false
+            active: NEVER
+            continueOnError: false
+            commitAuthor:
+            repository:
+                enabled: false
+                name: spec
+                token: **unset**
+        winget:
+            enabled: false
+            active: NEVER
+            continueOnError: false
+            commitAuthor:
+            package:
+            publisher:
+            installer:
+                type: WIX
+                scope: MACHINE
+                upgradeBehavior: INSTALL
+            repository:
+                enabled: false
+                name: winget
+                token: **unset**
+ 
+[INFO]  Project version set to 0.0.3
+[INFO]  Release is not snapshot
+[INFO]  Timestamp is 2023-07-24T14:58:00.107591429+01:00
+[INFO]  HEAD is at 924816a
+[INFO]  Platform is linux-x86_64
+[DEBUG] loading extension default-jreleaser-mustache:org.jreleaser.extensions.internal.mustache.DefaultMustacheExtension
+[DEBUG] adding org.jreleaser.extensions.internal.mustache.DefaultMustacheExtensionPoint from default-jreleaser-mustache extension
+[INFO]  Writing output properties to out/jreleaser/output.properties

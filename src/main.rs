@@ -46,7 +46,8 @@ async fn read_file(path: &String, pattern: &String) -> Result<(), Box<dyn std::e
     }
     // Printout the filepath and all the lines found
     if lines_vec.len() > 0 {
-        println!("File: {}", path);
+        // print file path in blue
+        println!("\x1b[34m{}\x1b[0m", path);
         for line in lines_vec {
             // Highlight the pattern found in the line red
             let line = line.replace(pattern, &format!("\x1b[31m{}\x1b[0m", pattern));
