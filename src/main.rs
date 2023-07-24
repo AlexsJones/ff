@@ -8,8 +8,22 @@ use tokio::io::{
 struct Args {
     pattern: String,
 }
+
+// Avoid directories
+const IGNORE_DIRS: [&str; 3] = ["/dev", "/proc", "/sys"];
+
 async fn read_file(path: &String, pattern: &String) -> Result<(), Box<dyn std::error::Error>> {
-    let f = tokio::fs::File::open(path).await.expect("Failed to open file");
+    let f = tokio::fs::File::open(path).await?;
+
+    match f.metadata().await {
+        Ok(metadata) => {
+            if metadata.is_dir() {
+                return Ok(());
+            }
+        }
+        Err(_e) => {},
+    }
+
     let reader = BufReader::new(f);
     // get iterator over lines
     let mut lines = reader.lines();
@@ -50,7 +64,12 @@ async fn app(path: &std::path::Path, pattern: &String) -> Result<(), Box<dyn std
     if path.exists() {
         // if path is hidden ignore
         if path.is_dir() {
-         // read dir
+
+         // check if it is an excluded directory
+            if IGNORE_DIRS.contains(&path.to_str().unwrap()) {
+                return Ok(());
+            }
+
             let mut dir = tokio::fs::read_dir(path).await?;
             while let Some(res) = dir.next_entry().await? {
                 let path = res.path();
@@ -73,6 +92,6 @@ async fn main() {
     let pattern = args.pattern;
     match app(path, &pattern).await {
         Ok(_) => println!("Done"),
-        Err(e) => println!("Error: {}", e),
+        Err(_e) => {},
     }
 }
