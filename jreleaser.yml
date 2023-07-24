@@ -12,7 +12,7 @@ project:
 
 environment:
   properties:
-    artifactsDir: out/jreleaser/assemble/rust-jreleaser/archive
+    artifactsDir: out/jreleaser/assemble/rust-jreleaser/archive/
 
 platform:
   replacements:
@@ -29,7 +29,7 @@ assemble:
       fileSets:
         - input: 'target/release'
           output: 'bin'
-          includes: [ 'rust-jreleaser{.exe,}' ]
+          includes: [ 'ff{.exe,}' ]
         - input: '.'
           includes: [ 'LICENSE' ]
 
@@ -39,12 +39,12 @@ distributions:
     executable:
       windowsExtension: exe
     artifacts:
-      - path: '{{artifactsDir}}/{{distributionName}}-{{projectVersion}}-darwin-amd64.zip'
-        platform: 'osx-x86_64'
+      # - path: '{{artifactsDir}}/{{distributionName}}-{{projectVersion}}-darwin-amd64.zip'
+      #   platform: 'osx-x86_64'
       - path: '{{artifactsDir}}/{{distributionName}}-{{projectVersion}}-linux-amd64.zip'
         platform: 'linux-x86_64'
-      - path: '{{artifactsDir}}/{{distributionName}}-{{projectVersion}}-windows-amd64.zip'
-        platform: 'windows-x86_64'
+      # - path: '{{artifactsDir}}/{{distributionName}}-{{projectVersion}}-windows-amd64.zip'
+      #   platform: 'windows-x86_64'
 
 packagers:
   brew:
